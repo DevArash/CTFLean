@@ -1,0 +1,47 @@
+# read data.dat file and save each line in index of array
+with open("data.dat") as file:
+    lines = file.readlines()
+
+
+def countNum(num):
+    count1s = 0
+    count0s = 0
+
+    if num == 0:
+        coutn0s += 1
+    elif num == 1:
+        count1s += 1
+
+    countNum = {
+            "zeros": count0s,
+            "ones": count1s
+            }
+
+    return countNum
+
+print countNum(1100)
+
+"""
+# define a count variable to count number of lines there are where the number of 0's is a multiple of 3 or the numbers of 1s is a multiple of 2
+count = 0
+
+
+for line in lines:
+    countZ = 0 # count number of 0s in each line
+    countO = 0 # count number of 1s in each line
+
+    for num in line:
+        if num == 0:
+            countZ += 1
+        elif num == 1:
+            countO += 1
+
+    print ("countZ", countZ, "\ncountO",countO)
+
+    if countZ % 3 == 0 or countO % 2 == 0:
+        count += 1
+
+print (count)
+
+
+
